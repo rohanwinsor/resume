@@ -16,7 +16,517 @@
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
+\usepackage[english]{babel}%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
 \usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\Huge \scshape Rohan W} \\ \vspace{1pt}
+    Chennai, India \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ +91 9840571093 ~ \href{mailto:rohan.w.charles@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{rohan.w.charles@gmail.com}} ~ 
+    \href{https://linkedin.com/in//}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/rohan-winsor-a80547161/}}  ~
+    \href{https://github.com/}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/ahnorr}}
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {SRM University}{July. 2015 -- July 2019}
+      {B.Tech E.C.E}{Chennai, TN}
+  \resumeSubHeadingListEnd
+
+%------RELEVANT COURSEWORK-------
+\section{Relevant Coursework}
+    %\resumeSubHeadingListStart
+        \begin{multicols}{4}
+            \begin{itemize}[itemsep=-5pt, parsep=3pt]
+                \item\small Data Structures
+                \item Software Methodology
+                \item Algorithms Analysis
+                \item Digital Image Process
+                \item Probability and Random Process
+                \item Internet Technology
+                \item Systems Programming
+            \end{itemize}
+        \end{multicols}
+        \vspace*{2.0\multicolsep}
+    %\resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+      
+    \resumeSubheading
+      {Rapid Acceleration Partners}{Feb 2020 -- Present}
+      {Machine Learning Engineer}{Chennai, TN}
+      \resumeItemListStart
+        \resumeItem{Built and maintained an API which classifies documents by using Multi-Model classification.}
+        \resumeItem{Build out NLP components for a low code AI platform}
+        \resumeItem{Leading a team of three people (excluding me) in building intelligent automation solutions for the
+US automobile industry and Customer service industry}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Zoomrx}{July 2019 -- Nov 2019}
+      {Data Science Associate}{Chennai, TN}
+      \resumeItemListStart
+        \resumeItem{Designed Business Rules for strategic classification of data into concepts such as Disease, Firms and Drug.}
+        \resumeItem{Developed system using fuzzy and elastic search to analyze the data cluster them.}
+        \resumeItem{Developed automated Python tool to handle encoding issues in data pipeline.}
+        \resumeItem{Data mining – ETL using Python and data visualization using Neo4j.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Zoomrx}{Dec 2018 -- July 2019}
+      {Data Science Intern}{Chennai, TN}
+      \resumeItemListStart
+        \resumeItem{Implemented data mining using web scraping-Python.}
+        \resumeItem{Performed feasibility check for new data source which could be the Golden source.}
+        \resumeItem{Implemented unit testing process successfully to check the integrity of the system.}
+      \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Stock Market Prediction} $|$ \emph{Python, Pytorch}}{}
+          \resumeItemListStart
+            \resumeItem{Gathered stock market data from yahoo finance}
+            \resumeItem{Restructured the data into sequential by using numpy and pandas}
+            \resumeItem{Trained the model with test accuracy of 61 and val accuracy of 59}
+          \resumeItemListEnd
+          \vspace{-13pt}
+      \resumeProjectHeading
+          {\textbf{ROAD ACCIDENT PREVENTION} $|$ \emph{Python, Sklearn}}{}
+          \resumeItemListStart
+            \resumeItem{Developed accident prediction and prevention system}
+            \resumeItem{Model was developed using Random Forest}
+            \resumeItem{Built customized python-based data collection and aggregation web scrapers on road accidents dating to 2013}
+          \resumeItemListEnd 
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
+
+
+%
+%-----------CERTIFICATES-----------
+\section{Certifications}
+    \resumeSubheading
+      {Deep Learning Spelization}{Nov 2019}
+      {Coursera}{}
+          \resumeItemListStart
+            \resumeItem{Build and train deep neural networks, identify key architecture parameters, implement vectorized neural networks and deep learning to applications}
+            \resumeItem{Train test sets, analyze variance for DL applications, use standard techniques and optimization algorithms, and build neural networks in TensorFlow}
+            \resumeItem{Build a CNN and apply it to detection and recognition tasks, use neural style transfer to generate art, and apply algorithms to image and video data}
+            \resumeItem{Build and train RNNs, work with NLP and Word Embeddings, and use HuggingFace tokenizers and transformer models to perform NER and Question Answering}
+          \resumeItemListEnd 
+  \resumeSubHeadingListEnd
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}
+    \small{\item{
+     \textbf{Languages}{: Python, JavaScript, SQL, golang} \\
+     \textbf{Technologies/Frameworks}{: Linux, GitHub, pytorch, tensorflow, Docker} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+%-----------INVOLVEMENT---------------
+\section{Leadership / Extracurricular}
+            \resumeItemListStart
+                \resumeItem{Teaching Assistant for teach for India for a month in DEC 2018 and NOV 2019}
+                \resumeItem{Taught programming to school children between DEC 2019 to Jan 2020}
+            \resumeItemListEnd
+
+
+\end{document}
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\Huge \scshape Rohan W} \\ \vspace{1pt}
+    Chennai, India \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ +91 9840571093 ~ \href{mailto:rohan.w.charles@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{rohan.w.charles@gmail.com}} ~ 
+    \href{https://linkedin.com/in//}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/rohan-winsor-a80547161/}}  ~
+    \href{https://github.com/}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/ahnorr}}
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {SRM University}{July. 2015 -- July 2019}
+      {B.Tech E.C.E}{Chennai, TN}
+  \resumeSubHeadingListEnd
+
+%------RELEVANT COURSEWORK-------
+\section{Relevant Coursework}
+    %\resumeSubHeadingListStart
+        \begin{multicols}{4}
+            \begin{itemize}[itemsep=-5pt, parsep=3pt]
+                \item\small Data Structures
+                \item Software Methodology
+                \item Algorithms Analysis
+                \item Digital Image Process
+                \item Probability and Random Process
+                \item Internet Technology
+                \item Systems Programming
+            \end{itemize}
+        \end{multicols}
+        \vspace*{2.0\multicolsep}
+    %\resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+      
+    \resumeSubheading
+      {Rapid Acceleration Partners}{Feb 2020 -- Present}
+      {Machine Learning Engineer}{Chennai, TN}
+      \resumeItemListStart
+        \resumeItem{Built and maintained an API which classifies documents by using Multi-Model classification.}
+        \resumeItem{Build out NLP components for a low code AI platform}
+        \resumeItem{Leading a team of three people (excluding me) in building intelligent automation solutions for the
+US automobile industry and Customer service industry}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Zoomrx}{July 2019 -- Nov 2019}
+      {Data Science Associate}{Chennai, TN}
+      \resumeItemListStart
+        \resumeItem{Designed Business Rules for strategic classification of data into concepts such as Disease, Firms and Drug.}
+        \resumeItem{Developed system using fuzzy and elastic search to analyze the data cluster them.}
+        \resumeItem{Developed automated Python tool to handle encoding issues in data pipeline.}
+        \resumeItem{Data mining – ETL using Python and data visualization using Neo4j.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Zoomrx}{Dec 2018 -- July 2019}
+      {Data Science Intern}{Chennai, TN}
+      \resumeItemListStart
+        \resumeItem{Implemented data mining using web scraping-Python.}
+        \resumeItem{Performed feasibility check for new data source which could be the Golden source.}
+        \resumeItem{Implemented unit testing process successfully to check the integrity of the system.}
+      \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Stock Market Prediction} $|$ \emph{Python, Pytorch}}{}
+          \resumeItemListStart
+            \resumeItem{Gathered stock market data from yahoo finance}
+            \resumeItem{Restructured the data into sequential by using numpy and pandas}
+            \resumeItem{Trained the model with test accuracy of 61 and val accuracy of 59}
+          \resumeItemListEnd
+          \vspace{-13pt}
+      \resumeProjectHeading
+          {\textbf{ROAD ACCIDENT PREVENTION} $|$ \emph{Python, Sklearn}}{}
+          \resumeItemListStart
+            \resumeItem{Developed accident prediction and prevention system}
+            \resumeItem{Model was developed using Random Forest}
+            \resumeItem{Built customized python-based data collection and aggregation web scrapers on road accidents dating to 2013}
+          \resumeItemListEnd 
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
+
+
+%
+%-----------CERTIFICATES-----------
+\section{Certifications}
+    \resumeSubheading
+      {Deep Learning Spelization}{Nov 2019}
+      {Coursera}{}
+          \resumeItemListStart
+            \resumeItem{Build and train deep neural networks, identify key architecture parameters, implement vectorized neural networks and deep learning to applications}
+            \resumeItem{Train test sets, analyze variance for DL applications, use standard techniques and optimization algorithms, and build neural networks in TensorFlow}
+            \resumeItem{Build a CNN and apply it to detection and recognition tasks, use neural style transfer to generate art, and apply algorithms to image and video data}
+            \resumeItem{Build and train RNNs, work with NLP and Word Embeddings, and use HuggingFace tokenizers and transformer models to perform NER and Question Answering}
+          \resumeItemListEnd 
+  \resumeSubHeadingListEnd
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}
+    \small{\item{
+     \textbf{Languages}{: Python, JavaScript, SQL, golang} \\
+     \textbf{Technologies/Frameworks}{: Linux, GitHub, pytorch, tensorflow, Docker} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+%-----------INVOLVEMENT---------------
+\section{Leadership / Extracurricular}
+            \resumeItemListStart
+                \resumeItem{Teaching Assistant for teach for India for a month in DEC 2018 and NOV 2019}
+                \resumeItem{Taught programming to school children between DEC 2019 to Jan 2020}
+            \resumeItemListEnd
+
+
+\end{document}
+
 \usepackage{tabularx}
 \usepackage{fontawesome5}
 \usepackage{multicol}
