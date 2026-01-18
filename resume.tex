@@ -124,7 +124,7 @@
 
 \begin{center}
     {\Huge \scshape Rohan W} \\ \vspace{1pt}
-    Chennai, India \\ \vspace{1pt}
+    Bengaluru, India \\ \vspace{1pt}
     \small \raisebox{-0.1\height}\faPhone\ +91 9840571093 ~ \href{mailto:rohan.w.charles@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{rohan.w.charles@gmail.com}} ~ 
     \href{https://www.linkedin.com/in/rohan-winsor/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com}}  ~
     \href{https://github.com/rohanwinsor}{\raisebox{-0.2\height}\faGithub\ \underline{github.com}}
@@ -132,13 +132,6 @@
 \end{center}
 
 
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {SRM University}{July. 2015 -- July 2019}
-      {B.Tech E.C.E}{Chennai, TN}
-  \resumeSubHeadingListEnd
 
 %------RELEVANT COURSEWORK-------
 % \section{Relevant Coursework}
@@ -161,13 +154,21 @@
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
-            
+    \resumeSubheading {Senior Machine Learning Engineer}{March 2025 -- Present} {Avalara}{Banglore, IN (remote)} 
+    \resumeItemListStart 
+    \resumeItem{Engineered and deployed an internal, multi-cloud LLM server that provided a secure, standardized OpenAI-compatible API across Azure, AWS Bedrock, and Google Vertex AI, ensuring model flexibility and strict data governance for internal teams.} 
+    \resumeItem{Developed and integrated full-featured API endpoints into the server that were fully compliant with the OpenAI specification for all critical internal use cases, including Chat Completion, Responses, Model Evaluation, and Fine-Tuning.} 
+    \resumeItem{Improved ML operational reliability and scalability by leading the infrastructure migration of long-running evaluation and prompt finetuning jobs from Celery to Temporal, enhancing workflow management and fault tolerance.} 
+    \resumeItemListEnd
+  
   \resumeSubheading
-    {Senior Research Engineer - Machine Learning}{April 2024 -- Present}
+    {ML Research Engineer - II (L5)}{April 2024 -- March 2025}
     {Amazon}{Banglore, IN}
     \resumeItemListStart
-        \resumeItem{Tested the efficacy of claud on backfilling product attributes}
-        \resumeItem{Used Hierarchy Prompting to leverage internal LLMs to backfill attributes for products across amazon market places}
+        \resumeItem{Engineered and deployed a massive-scale, high-accuracy attribute identification system. This involved fine-tuning a Small Language Model (Llama), integrating a multi-agent validation step leveraging the "More Agents Is All You Need" architecture for quality assurance, and deploying the system using a VLLM-based distributed setup (with page attention and dynamic batching) to accurately identify attribute values for millions of products while achieving high throughput and minimizing cost.}
+        \resumeItem{Ideated and Developed a platform using LLMs (Claude 3.5 Haiku) to accelerate the speed at which Data Associates could add missing attributes to the Amazon catalog, significantly boosting their productivity for data backfilling.}
+        \resumeItem{Developed and presented a Platform Proof-of-Concept for Automated Prompt Finetuning using DSPy to leadership. This system was projected to reduce manual prompt engineering effort and boost ML Engineer productivity by 140\%, helping the team reach the Q4 goal faster and increase the goal for the following year.}
+        \resumeItem{Enhanced the Amazon retail search experience by utilizing advanced prompting techniques, including Chain-of-Thought (CoT) and Meta-Prompting, across internal services.}
   \resumeItemListEnd
       
   \resumeSubheading
@@ -206,19 +207,53 @@
         \resumeItem{Worked on an internal tool to QC parsed data and update them real-time}
       \resumeItemListEnd
     
+
   \resumeSubHeadingListEnd
-\vspace{-16pt}
+\vspace{-10pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {SRM University}{July. 2015 -- July 2019}
+      {B.Tech E.C.E}{Chennai, TN}
+  \resumeSubHeadingListEnd
+%-----------OPEN SOURCE-----------
+\section{OSS Contributions}
+
+\begin{itemize}[leftmargin=*]
+  \item \small{
+  Active contributor to widely adopted open-source ML and systems libraries, with merged pull requests across core Python runtime, LLM infrastructure tooling, and research-driven optimization frameworks; representative selection shown below, with full contribution history available on GitHub.}
+  
+  \vspace{3pt}
+  \item \small{
+  \href{https://github.com/python/cpython/pulls?q=is:pr+author:rohanwinsor+is:merged}{CPython}
+  \,$\bullet$\, 
+  \href{https://github.com/BerriAI/litellm/pulls?q=is:pr+author:rohanwinsor+is:merged}{LiteLLM}
+  \,$\bullet$\, 
+  \href{https://github.com/zou-group/textgrad/pulls?q=is:pr+author:rohanwinsor+is:merged}{TextGrad}
+  }
+\end{itemize}
+
+\vspace{-10pt}
+
 
 %
-%-----------CERTIFICATES-----------
+%-----------CERTIFICATIONS-----------
 \section{Certifications}
-    \resumeSubheading
-      {Deep Learning Specialization}{Nov 2019}
-      {Coursera}{}
-    \resumeSubheading
-      {Game Theory}{Sept 2020}
-      {Stanford University}{}
-      
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {\href{https://www.coursera.org/account/accomplishments/verify/R0235G152HZP}{Deep Learning Specialization}}
+  {Nov 2019}
+  {Coursera}{}
+
+\resumeSubheading
+  {\href{https://www.coursera.org/account/accomplishments/verify/JJ99NMJXVSCP}{Game Theory}}
+  {Sept 2020}
+  {Stanford University}{}
+
+\resumeSubHeadingListEnd
 \section{Awards}
     \resumeSubheading
       {Employee of the Quarter}{August 2023}
@@ -232,18 +267,16 @@
   \resumeSubHeadingListEnd
 
 
-%
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}
     \small{
-\resumeItem{\textbf{Languages}{: Python, SQL}} \\
-\resumeItem{\textbf{Technologies/Frameworks}{: Linux, Git, PyTorch, TensorFlow, Flask, Scikit-learn, }} \\
-\resumeItem{\textbf{Containerization}{: Docker, Docker-compose, Podman}} \\
+\resumeItem{\textbf{Languages}{: Python, Typescript, C}} \\
+\resumeItem{\textbf{Technologies/Frameworks}{: Linux, Git, PyTorch, TensorFlow, Flask, FastAPI, Scikit-learn, }} \\
+\resumeItem{\textbf{Deployment}{: Docker, Docker-compose, Podman, K8, Helm}} \\
 \resumeItem{\textbf{Data Manipulation}{: Pandas, Numpy, SQL}} \\
 \resumeItem{\textbf{Data Visualization}{: Matplotlib, Seaborn, Plotly, D3.js}} \\
-\resumeItem{\textbf{Cloud Computing}{: AWS (SageMaker, S3,  CloudWatch,  CloudShell,  Textract,  EC2) } }\\}
-\resumeItem{\textbf{LLMs}{: gpt-3.5, llama2 and mistral, LangChain}}
+\resumeItem{\textbf{Cloud Computing}{: AWS, GCP } }\\}
  \end{itemize}
  \vspace{-16pt}
 
