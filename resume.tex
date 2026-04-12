@@ -5,7 +5,9 @@
 % License : MIT
 %------------------------
 \documentclass[9pt]{extarticle}
-
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -111,20 +113,18 @@
 \section{Technical Skills}
 \begin{itemize}[itemsep=3pt, parsep=0pt, leftmargin=0.15in]
     \item\small{\textbf{LLM \& GenAI}: Fine-tuning (LoRA/QLoRA/PEFT), Prompt Engineering (DSPy, CoT, Meta-Prompting), Multi-agent Systems, RAG}
-    \item\small{\textbf{Serving \& Optimization}: vLLM (PageAttention, Dynamic Batching), Model Quantization, TensorRT, ONNX}
+    \item\small{\textbf{Serving \& Optimization}: vLLM, CUDA, CUDA Graphs, Dynamic Batching, Model Quantization, TensorRT, ONNX, LLM Inference Optimization}
     \item\small{\textbf{ML Frameworks}: PyTorch, TensorFlow, LangChain, Scikit-learn, Pandas, NumPy}
-    \item\small{\textbf{Infrastructure \& MLOps}: Temporal, Celery, Docker, Kubernetes, Helm, CI/CD, A/B Testing}
-    \item\small{\textbf{Cloud Platforms}: AWS (Bedrock, SageMaker), Azure, GCP (Vertex AI), Multi-cloud Architecture}
-    \item\small{\textbf{Languages}: Python, TypeScript, C, SQL}
+    \item\small{\textbf{Infrastructure \& MLOps}: Temporal, Celery, Docker, Kubernetes, Helm, CI/CD, A/B Testing, Multi-cloud Architecture}
 \end{itemize}
 \vspace{-8pt}
 
 %-----------EXPERIENCE-----------
 \section{Experience}
-\resumeSubheading {Senior Machine Learning Engineer (IC3)}{March 2025 -- Present} {Avalara}{Bangalore, IN (Remote)} 
+\resumeSubheading {Senior Machine Learning Engineer}{March 2025 -- Present} {Avalara}{Bangalore, IN (Remote)} 
 \resumeItemListStart 
 \resumeItem{Engineered and deployed an internal, multi-cloud LLM server providing a secure, standardized \textbf{OpenAI-compatible API} across \textbf{Azure, AWS Bedrock, and Google Vertex AI} for all agent development teams company-wide. Handles \textbf{1 million requests daily}, reducing engineering effort through a unified abstraction layer while ensuring model flexibility and strict data governance.} 
-\resumeItem{Developed and integrated full-featured API endpoints fully compliant with the \textbf{OpenAI specification} for all critical internal use cases, including \textbf{Chat Completion, Responses, Model Evaluation, and Fine-Tuning}.} 
+\resumeItem{Built and deployed a custom GPU inference pipeline for a \textbf{BERT-based HS code multi-label classification} system, implementing \textbf{custom CUDA optimizations}, dynamic batching, and efficient scheduling to improve \textbf{latency, throughput, and GPU utilization} in production.}
 \resumeItem{Improved ML operational reliability and scalability by leading the infrastructure migration of long-running evaluation and prompt finetuning jobs from \textbf{Celery to Temporal}, enhancing workflow management and fault tolerance.} 
 \resumeItemListEnd
 
@@ -140,18 +140,17 @@
 \resumeItemListEnd
     
 \vspace{5pt}  
-  \resumeSubheading
-    {Senior Machine Learning Engineer }{Feb 2020 -- June 2024}
-    {Rapid Acceleration Partners}{Chennai, IN}
-    \resumeItemListStart
-    
-        \resumeItem{Led, \textbf{mentored and guided a team of 4 members} in the Machine Learning Team}
-        \resumeItem{Was instrumental in pushing for and implementing changes to the training pipeline for our product (RAPFlow) to increase efficiency and usability}        
-        \resumeItem{Upgraded the in-house OCR solution resulting in a \textbf{48\% reduction} in inference time without compromising on inference quality}
-        \resumeItem{Developed and implemented a chatbot powered by GPT-3.5 and LangChain to automate customer interactions and lead them to setup an appointment with the car dealership. The chatbot was able to answer customer questions, provide product information, and schedule appointments. As a result, the chatbot increased customer satisfaction, reduced drop off, and improved the sales funnel}
-        \resumeItem{Lead a team that built and deployed AI driven automation tools to optimize sales leads for US car dealerships as well as create new sales leads to drive revenue growth. In addition to that we developed a tool to optimize warehouse workflow}
-        \resumeItem{Developed a document classification model to classify documents in the airplane parts space and a document understanding models to extract key value pairs from the same}
-    \resumeItemListEnd
+\resumeSubheading
+  {Senior Machine Learning Engineer }{Feb 2020 -- June 2024}
+  {Rapid Acceleration Partners}{Chennai, IN}
+  \resumeItemListStart
+      \resumeItem{Led, \textbf{mentored and guided a team of 4 members} in the Machine Learning Team}
+      \resumeItem{Re-architected parts of the \textbf{RAPFlow} ML pipeline to support more efficient GPU deployment, introducing \textbf{CUDA-backed inference optimizations}, export/runtime improvements, and batch processing changes to improve production efficiency and usability.}
+      \resumeItem{Upgraded the in-house OCR inference stack using \textbf{CUDA/TensorRT-based optimization}, reducing inference time by \textbf{48\%} without compromising output quality.}
+      \resumeItem{Developed and implemented a chatbot powered by GPT-3.5 and LangChain to automate customer interactions and lead them to setup an appointment with the car dealership. The chatbot was able to answer customer questions, provide product information, and schedule appointments. As a result, the chatbot increased customer satisfaction, reduced drop off, and improved the sales funnel}
+      \resumeItem{Lead a team that built and deployed AI driven automation tools to optimize sales leads for US car dealerships as well as create new sales leads to drive revenue growth. In addition to that we developed a tool to optimize warehouse workflow}
+      \resumeItem{Built GPU-optimized document classification and document understanding pipelines for the airplane-parts domain, using \textbf{CUDA/TensorRT/ONNX-based inference optimization} and batching strategies to improve \textbf{latency and throughput} in production.}
+  \resumeItemListEnd
 \vspace{5pt}
 
     \resumeSubheading
@@ -172,6 +171,7 @@
       {SRM University}{July. 2015 -- July 2019}
       {B.Tech E.C.E}{Chennai, TN}
   \resumeSubHeadingListEnd
+
 %-----------OPEN SOURCE-----------
 \section{OSS Contributions}
 
@@ -182,8 +182,6 @@
 
 \vspace{-10pt}
 
-
-%
 %-----------CERTIFICATIONS-----------
 \section{Certifications}
 \resumeSubHeadingListStart
@@ -197,7 +195,5 @@
   {\href{https://www.coursera.org/account/accomplishments/verify/JJ99NMJXVSCP}{Game Theory}}
   {Sept 2020}
   {Stanford University}{}
-
-
 
 \end{document}
