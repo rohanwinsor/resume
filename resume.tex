@@ -26,7 +26,7 @@
 \input{glyphtounicode}
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -39,7 +39,6 @@
 \addtolength{\textheight}{1.2in}
 
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
@@ -49,21 +48,13 @@
   \vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
+% Ensure that generated PDF is machine readable/ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
-  }
+  \item\small{{#1 \vspace{-2pt}}}
 }
 
 \newcommand{\resumeSubheading}[4]{
@@ -102,6 +93,7 @@
 
 \begin{center}
     {\Huge \scshape Rohan W} \\ \vspace{1pt}
+    Senior Machine Learning Engineer $|$ LLM Systems, Inference Optimization, Evaluation Pipelines, GenAI Infrastructure \\ \vspace{1pt}
     Bengaluru, India \\ \vspace{1pt}
     \small \raisebox{-0.1\height}\faPhone\ +91 9840571093 ~ \href{mailto:rohan.w.charles@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{rohan.w.charles@gmail.com}} ~ 
     \href{https://www.linkedin.com/in/rohan-winsor/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com}}  ~
@@ -109,91 +101,99 @@
     \vspace{-8pt}
 \end{center}
 
+%-----------SUMMARY-----------
+\section{Summary}
+\small{Senior Machine Learning Engineer with experience building production GenAI platforms, OpenAI-compatible model APIs, evaluation workflows, GPU-optimized inference pipelines, and scalable ML infrastructure. Strong fit for ML Systems, LLM Inference, AI Platform, Applied ML, and Research Engineering roles at teams building foundation-model products, real-time AI systems, and developer APIs.}
+\vspace{-6pt}
+
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
 \begin{itemize}[itemsep=3pt, parsep=0pt, leftmargin=0.15in]
-    \item\small{\textbf{LLM \& GenAI}: Fine-tuning (LoRA/QLoRA/PEFT), Prompt Engineering (DSPy, CoT, Meta-Prompting), Multi-agent Systems, RAG}
-    \item\small{\textbf{Serving \& Optimization}: vLLM, CUDA, CUDA Graphs, Dynamic Batching, Model Quantization, TensorRT, ONNX, LLM Inference Optimization}
-    \item\small{\textbf{ML Frameworks}: PyTorch, TensorFlow, LangChain, Scikit-learn, Pandas, NumPy}
-    \item\small{\textbf{Infrastructure \& MLOps}: Temporal, Celery, Docker, Kubernetes, Helm, CI/CD, A/B Testing, Multi-cloud Architecture}
+    \item\small{\textbf{LLM Systems \& GenAI}: OpenAI-compatible APIs, RAG, multi-agent systems, prompt evaluation, fine-tuning workflows, LLM-as-judge, multi-cloud model gateways}
+    \item\small{\textbf{Inference \& Optimization}: vLLM, SGLang concepts, CUDA, CUDA Graphs, TensorRT, ONNX Runtime, quantization, dynamic batching, latency/throughput optimization}
+    \item\small{\textbf{ML \& Modeling}: PyTorch, TensorFlow, BERT, multi-label classification, threshold tuning, class imbalance handling, model evaluation, A/B testing}
+    \item\small{\textbf{Data \& Evaluation}: annotation workflows, synthetic data validation, automated quality checks, error analysis, experiment design, production monitoring}
+    \item\small{\textbf{Infrastructure \& MLOps}: Temporal, Celery, Docker, Kubernetes, Helm, CI/CD, Ray, distributed workflows, multi-cloud architecture}
 \end{itemize}
 \vspace{-8pt}
 
 %-----------EXPERIENCE-----------
 \section{Experience}
-\resumeSubheading {Senior Machine Learning Engineer}{March 2025 -- Present} {Avalara}{Bangalore, IN (Remote)} 
-\resumeItemListStart 
-\resumeItem{Engineered and deployed an internal, multi-cloud LLM server providing a secure, standardized \textbf{OpenAI-compatible API} across \textbf{Azure, AWS Bedrock, and Google Vertex AI} for all agent development teams company-wide. Handles \textbf{1 million requests daily}, reducing engineering effort through a unified abstraction layer while ensuring model flexibility and strict data governance.} 
-\resumeItem{Built and deployed a custom GPU inference pipeline for a \textbf{BERT-based HS code multi-label classification} system, implementing \textbf{custom CUDA optimizations}, dynamic batching, and efficient scheduling to improve \textbf{latency, throughput, and GPU utilization} in production.}
-\resumeItem{Improved ML operational reliability and scalability by leading the infrastructure migration of long-running evaluation and prompt finetuning jobs from \textbf{Celery to Temporal}, enhancing workflow management and fault tolerance.} 
-\resumeItemListEnd
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Senior Machine Learning Engineer}{March 2025 -- Present}
+  {Avalara}{Bengaluru, IN (Remote)}
+  \resumeItemListStart
+    \resumeItem{Built and deployed a secure multi-cloud LLM platform exposing standardized \textbf{OpenAI-compatible APIs} across \textbf{Azure, AWS Bedrock, and Google Vertex AI}, handling \textbf{1M+ daily requests} for internal agent and GenAI teams.}
+    \resumeItem{Designed model-routing, governance, and provider-abstraction layers to support production GenAI applications while reducing duplicate integration effort across teams.}
+    \resumeItem{Built a \textbf{BERT-based HS-code multi-label classification} system with label design, validation workflows, threshold tuning, class-imbalance handling, and production evaluation.}
+    \resumeItem{Implemented GPU inference improvements using \textbf{CUDA, TensorRT, ONNX, dynamic batching, and efficient scheduling} to improve latency, throughput, and GPU utilization for classification workloads.}
+    \resumeItem{Migrated long-running evaluation and prompt fine-tuning workflows from \textbf{Celery to Temporal}, improving reliability, retries, fault tolerance, and experiment reproducibility.}
+  \resumeItemListEnd
 
 \vspace{5pt}
 \resumeSubheading
   {ML Research Engineer - II (L5)}{April 2024 -- March 2025}
-  {Amazon}{Bangalore, IN}
+  {Amazon}{Bengaluru, IN}
   \resumeItemListStart
-      \resumeItem{Improved Items Glance View by \textbf{20\% across 100 million products} through \textbf{A/B testing} for products without defects. Built POC using Claude, then deployed production system using \textbf{fine-tuned Mistral 7B model with Ray and vLLM} to increase accuracy.}
-      \resumeItem{Developed platform using LLMs (Claude 3.5 Haiku) to accelerate Data Associates' productivity for adding missing attributes to the Amazon catalog, significantly boosting data backfilling efficiency.}
-      \resumeItem{Developed and presented Platform Proof-of-Concept for Automated Prompt Finetuning using DSPy to leadership, projected to reduce manual prompt engineering effort and boost ML Engineer productivity by 140\%, helping the team reach Q4 goal faster. Recognized with \textbf{RISE Q4 2024 award}.}
-      \resumeItem{Enhanced Amazon retail search experience utilizing advanced prompting techniques including Chain-of-Thought (CoT) and Meta-Prompting across internal services.}
-\resumeItemListEnd
-    
-\vspace{5pt}  
+    \resumeItem{Improved Items Glance View by \textbf{20\% across 100M products} through A/B testing, LLM-assisted experimentation, and production deployment for products without defects.}
+    \resumeItem{Built a production system using a \textbf{fine-tuned Mistral 7B model with Ray and vLLM}, after validating an initial Claude-based POC, to improve catalog enrichment accuracy.}
+    \resumeItem{Developed an LLM platform using \textbf{Claude 3.5 Haiku} to accelerate Data Associate workflows for missing-attribute generation and catalog backfilling.}
+    \resumeItem{Developed and presented an automated prompt-fine-tuning POC using \textbf{DSPy}, projected to reduce manual prompt-engineering effort and improve ML engineer productivity by \textbf{140\%}; recognized with \textbf{RISE Q4 2024}.}
+    \resumeItem{Enhanced Amazon retail search workflows using Chain-of-Thought prompting, meta-prompting, controlled experiments, and production evaluation across internal services.}
+  \resumeItemListEnd
+
+\vspace{5pt}
 \resumeSubheading
-  {Senior Machine Learning Engineer }{Feb 2020 -- June 2024}
+  {Senior Machine Learning Engineer}{Feb 2020 -- June 2024}
   {Rapid Acceleration Partners}{Chennai, IN}
   \resumeItemListStart
-      \resumeItem{Led, \textbf{mentored and guided a team of 4 members} in the Machine Learning Team}
-      \resumeItem{Re-architected parts of the \textbf{RAPFlow} ML pipeline to support more efficient GPU deployment, introducing \textbf{CUDA-backed inference optimizations}, export/runtime improvements, and batch processing changes to improve production efficiency and usability.}
-      \resumeItem{Upgraded the in-house OCR inference stack using \textbf{CUDA/TensorRT-based optimization}, reducing inference time by \textbf{48\%} without compromising output quality.}
-      \resumeItem{Developed and implemented a chatbot powered by GPT-3.5 and LangChain to automate customer interactions and lead them to setup an appointment with the car dealership. The chatbot was able to answer customer questions, provide product information, and schedule appointments. As a result, the chatbot increased customer satisfaction, reduced drop off, and improved the sales funnel}
-      \resumeItem{Lead a team that built and deployed AI driven automation tools to optimize sales leads for US car dealerships as well as create new sales leads to drive revenue growth. In addition to that we developed a tool to optimize warehouse workflow}
-      \resumeItem{Built GPU-optimized document classification and document understanding pipelines for the airplane-parts domain, using \textbf{CUDA/TensorRT/ONNX-based inference optimization} and batching strategies to improve \textbf{latency and throughput} in production.}
+    \resumeItem{Led and mentored a \textbf{4-member ML team} building document AI, OCR, classification, chatbot, and workflow-automation systems for production customers.}
+    \resumeItem{Re-architected parts of the \textbf{RAPFlow} ML pipeline for more efficient GPU deployment, adding \textbf{CUDA-backed inference optimizations}, runtime/export improvements, and batch-processing changes.}
+    \resumeItem{Upgraded the in-house OCR inference stack using \textbf{CUDA/TensorRT-based optimization}, reducing inference time by \textbf{48\%} without compromising output quality.}
+    \resumeItem{Built GPU-optimized document classification and document-understanding pipelines for the airplane-parts domain using \textbf{CUDA, TensorRT, ONNX, and batching} to improve latency and throughput.}
+    \resumeItem{Developed a GPT-3.5 and LangChain chatbot for automotive dealerships to answer customer questions, provide product information, schedule appointments, reduce drop-off, and improve the sales funnel.}
+    \resumeItem{Led delivery of AI automation tools for US car dealerships and warehouse workflows, improving lead generation, operational throughput, and customer workflow efficiency.}
   \resumeItemListEnd
+
 \vspace{5pt}
+\resumeSubheading
+  {Data Science Associate}{Dec 2018 -- Nov 2019}
+  {ZoomRx}{Chennai, IN}
+  \resumeItemListStart
+    \resumeItem{Built data-processing tools to integrate data from multiple sources into downstream analytics and operational modules, improving reliability of recurring data workflows.}
+  \resumeItemListEnd
 
-    \resumeSubheading
-      {Data Science Associate}{Dec 2018 -- Nov 2019}
-      {Zoomrx}{Chennai, IN}
-      \resumeItemListStart
-        \resumeItem{Developed data processing tool so as to ensure that data from different sources integrates seamlessly with the different modules that consume that data}
-      \resumeItemListEnd
-    
-
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 \vspace{-5pt}
 
 %-----------EDUCATION-----------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {SRM University}{July. 2015 -- July 2019}
-      {B.Tech E.C.E}{Chennai, TN}
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {SRM University}{July 2015 -- July 2019}
+    {B.Tech, Electronics and Communication Engineering}{Chennai, TN}
+\resumeSubHeadingListEnd
 
 %-----------OPEN SOURCE-----------
 \section{OSS Contributions}
-
 \begin{itemize}[leftmargin=*]
-  \item \small{
-  Active contributor to widely adopted open-source ML and systems libraries, with merged pull requests across core Python runtime, LLM infrastructure tooling, and research-driven optimization frameworks; representative selection shown below, with full contribution history available on GitHub.}
+  \item \small{Active contributor to open-source ML and systems libraries, with merged pull requests across core Python runtime, LLM infrastructure tooling, and optimization frameworks. Full contribution history available on GitHub.}
 \end{itemize}
-
 \vspace{-10pt}
 
 %-----------CERTIFICATIONS-----------
 \section{Certifications}
 \resumeSubHeadingListStart
-
-\resumeSubheading
-  {\href{https://www.coursera.org/account/accomplishments/verify/R0235G152HZP}{Deep Learning Specialization}}
-  {Nov 2019}
-  {Coursera}{}
-
-\resumeSubheading
-  {\href{https://www.coursera.org/account/accomplishments/verify/JJ99NMJXVSCP}{Game Theory}}
-  {Sept 2020}
-  {Stanford University}{}
+  \resumeSubheading
+    {\href{https://www.coursera.org/account/accomplishments/verify/R0235G152HZP}{Deep Learning Specialization}}
+    {Nov 2019}
+    {Coursera}{}
+  \resumeSubheading
+    {\href{https://www.coursera.org/account/accomplishments/verify/JJ99NMJXVSCP}{Game Theory}}
+    {Sept 2020}
+    {Stanford University}{}
+\resumeSubHeadingListEnd
 
 \end{document}
