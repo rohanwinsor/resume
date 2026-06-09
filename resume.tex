@@ -113,7 +113,7 @@
     \item\small{\textbf{Inference \& Optimization}: vLLM, SGLang concepts, CUDA, CUDA Graphs, TensorRT, ONNX Runtime, quantization, dynamic batching, latency/throughput optimization}
     \item\small{\textbf{ML \& Modeling}: PyTorch, TensorFlow, BERT, multi-label classification, threshold tuning, class imbalance handling, model evaluation, A/B testing}
     \item\small{\textbf{Data \& Evaluation}: annotation workflows, synthetic data validation, automated quality checks, error analysis, experiment design, production monitoring}
-    \item\small{\textbf{Infrastructure \& MLOps}: Temporal, Celery, Docker, Kubernetes, Helm, CI/CD, Ray, distributed workflows, multi-cloud architecture}
+    \item\small{\textbf{Infrastructure \& MLOps}: Temporal, Celery, Docker, Kubernetes, Helm, CI/CD, distributed workflows, multi-cloud architecture}
 \end{itemize}
 \vspace{-8pt}
 
@@ -128,7 +128,7 @@
     \resumeItem{Built and deployed a secure multi-cloud LLM platform exposing standardized \textbf{OpenAI-compatible APIs} across \textbf{Azure, AWS Bedrock, and Google Vertex AI}, handling \textbf{1M+ daily requests} for internal agent and GenAI teams.}
     \resumeItem{Designed model-routing, governance, and provider-abstraction layers to support production GenAI applications while reducing duplicate integration effort across teams.}
     \resumeItem{Built a \textbf{BERT-based HS-code multi-label classification} system with label design, validation workflows, threshold tuning, class-imbalance handling, and production evaluation.}
-    \resumeItem{Implemented GPU inference improvements using \textbf{CUDA, TensorRT, ONNX, dynamic batching, and efficient scheduling} to improve latency, throughput, and GPU utilization for classification workloads.}
+    \resumeItem{Implemented GPU inference improvements using \textbf{TensorRT, ONNX, dynamic batching, and efficient scheduling} to improve latency, throughput, and GPU utilization for classification workloads.}
     \resumeItem{Migrated long-running evaluation and prompt fine-tuning workflows from \textbf{Celery to Temporal}, improving reliability, retries, fault tolerance, and experiment reproducibility.}
   \resumeItemListEnd
 
@@ -137,8 +137,8 @@
   {ML Research Engineer - II (L5)}{April 2024 -- March 2025}
   {Amazon}{Bengaluru, IN}
   \resumeItemListStart
-    \resumeItem{Improved Items Glance View by \textbf{20\% across 100M products} through A/B testing, LLM-assisted experimentation, and production deployment for products without defects.}
-    \resumeItem{Built a production system using a \textbf{fine-tuned Mistral 7B model with Ray and vLLM}, after validating an initial Claude-based POC, to improve catalog enrichment accuracy.}
+    \resumeItem{Improved Items Glance View by \textbf{20\% across 100M products} through A/B testing, LLM-assisted experimentation, and production deployment for eliminating products  defects.}
+    \resumeItem{Built a production system fine-tuning \textbf{Mistral 7B with LoRA and HuggingFace}, serving via \textbf{vLLM} for catalog enrichment, validated against a Claude-based POC.}
     \resumeItem{Developed an LLM platform using \textbf{Claude 3.5 Haiku} to accelerate Data Associate workflows for missing-attribute generation and catalog backfilling.}
     \resumeItem{Developed and presented an automated prompt-fine-tuning POC using \textbf{DSPy}, projected to reduce manual prompt-engineering effort and improve ML engineer productivity by \textbf{140\%}; recognized with \textbf{RISE Q4 2024}.}
     \resumeItem{Enhanced Amazon retail search workflows using Chain-of-Thought prompting, meta-prompting, controlled experiments, and production evaluation across internal services.}
@@ -150,9 +150,9 @@
   {Rapid Acceleration Partners}{Chennai, IN}
   \resumeItemListStart
     \resumeItem{Led and mentored a \textbf{4-member ML team} building document AI, OCR, classification, chatbot, and workflow-automation systems for production customers.}
-    \resumeItem{Re-architected parts of the \textbf{RAPFlow} ML pipeline for more efficient GPU deployment, adding \textbf{CUDA-backed inference optimizations}, runtime/export improvements, and batch-processing changes.}
-    \resumeItem{Upgraded the in-house OCR inference stack using \textbf{CUDA/TensorRT-based optimization}, reducing inference time by \textbf{48\%} without compromising output quality.}
-    \resumeItem{Built GPU-optimized document classification and document-understanding pipelines for the airplane-parts domain using \textbf{CUDA, TensorRT, ONNX, and batching} to improve latency and throughput.}
+    \resumeItem{Re-architected parts of the \textbf{RAPFlow} ML pipeline for more efficient GPU deployment, adding \textbf{GPU-level inference optimizations}, runtime/export improvements, and batch-processing changes.}
+    \resumeItem{Optimized PaddleOCR invoice pipeline by writing custom \textbf{CUDA kernels} for GPU-side image normalization and \textbf{HWC to CHW preprocessing, and DBNet} probability map binarization post-processing, combined with \textbf{TensorRT FP16} engine compilation }
+    \resumeItem{Built GPU-optimized document classification and document-understanding pipelines for the airplane-parts domain using \textbf{TensorRT, ONNX, and batching} to improve latency and throughput.}
     \resumeItem{Developed a GPT-3.5 and LangChain chatbot for automotive dealerships to answer customer questions, provide product information, schedule appointments, reduce drop-off, and improve the sales funnel.}
     \resumeItem{Led delivery of AI automation tools for US car dealerships and warehouse workflows, improving lead generation, operational throughput, and customer workflow efficiency.}
   \resumeItemListEnd
