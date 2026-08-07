@@ -1,10 +1,9 @@
 %-------------------------
-% Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
-%------------------------
+% Resume in LaTeX
+% Tailored for Qualcomm Staff Engineer - CPU SW/HW Co-Design Engineer (ML Systems)
+%-------------------------
 \documentclass[9pt]{extarticle}
+
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{microtype}
@@ -13,7 +12,6 @@
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
@@ -21,6 +19,7 @@
 \usepackage{tabularx}
 \usepackage{fontawesome5}
 \usepackage{multicol}
+
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
@@ -48,7 +47,7 @@
   \vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generated PDF is machine readable/ATS parsable
+% Ensure generated PDF is machine readable / ATS parsable
 \pdfgentounicode=1
 
 %-------------------------
@@ -59,61 +58,61 @@
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textbf{\small #2} \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & \textbf{\small #2} \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-7pt}
+  \item
+  \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+    \small #1 & \textbf{\small #2}\\
+  \end{tabular*}\vspace{-7pt}
 }
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.20in]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \begin{document}
 
+%----------HEADER----------
 \begin{center}
-    {\Huge \scshape Rohan W} \\ \vspace{1pt}
-    Senior Machine Learning Engineer $|$ LLM Systems, Inference Optimization, Evaluation Pipelines, GenAI Infrastructure \\ \vspace{1pt}
-    Bengaluru, India \\ \vspace{1pt}
-    \small \raisebox{-0.1\height}\faPhone\ +91 9840571093 ~ \href{mailto:rohan.w.charles@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{rohan.w.charles@gmail.com}} ~ 
-    \href{https://www.linkedin.com/in/rohan-winsor/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com}}  ~
-    \href{https://github.com/rohanwinsor}{\raisebox{-0.2\height}\faGithub\ \underline{github.com}}
-    \vspace{-8pt}
+  {\Huge \scshape Rohan W} \\ \vspace{1pt}
+  \small Senior Machine Learning Engineer $|$ ML Systems, GPU Kernels, Inference Optimization, Performance Engineering \\ \vspace{1pt}
+  Bengaluru, India \\ \vspace{1pt}
+  \raisebox{-0.1\height}\faPhone\ +91 9840571093
+  \quad
+  \href{mailto:rohan.w.charles@gmail.com}{
+    \raisebox{-0.2\height}\faEnvelope\ \underline{rohan.w.charles@gmail.com}}
+  \quad
+  \href{https://www.linkedin.com/in/rohan-winsor/}{
+    \raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/rohan-winsor}}
+  \quad
+  \href{https://github.com/rohanwinsor}{
+    \raisebox{-0.2\height}\faGithub\ \underline{github.com/rohanwinsor}}
+  \vspace{-8pt}
 \end{center}
 
 %-----------SUMMARY-----------
 \section{Summary}
-\small{Senior Machine Learning Engineer with experience building production GenAI platforms, OpenAI-compatible model APIs, evaluation workflows, GPU-optimized inference pipelines, and scalable ML infrastructure. Strong fit for ML Systems, LLM Inference, AI Platform, Applied ML, and Research Engineering roles at teams building foundation-model products, real-time AI systems, and developer APIs.}
+\small{
+Senior Machine Learning Engineer with 7+ years of experience building and optimizing ML systems across model architecture, GPU kernels, inference runtimes, and production serving. Hands-on experience with CUDA/C++, Triton, PyTorch, TensorRT, ONNX, transformer internals, performance profiling, memory-aware optimization, and large-scale LLM serving. Built custom GPU kernels, implemented GPT-style transformer components from first principles, and designed production inference systems serving 1M+ daily requests.
+}
 \vspace{-6pt}
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
-\begin{itemize}[itemsep=3pt, parsep=0pt, leftmargin=0.15in]
-    \item\small{\textbf{LLM Systems \& GenAI}: OpenAI-compatible APIs, RAG, multi-agent systems, prompt evaluation, fine-tuning workflows, LLM-as-judge, multi-cloud model gateways}
-    \item\small{\textbf{Inference \& Optimization}: vLLM, SGLang concepts, CUDA, CUDA Graphs, TensorRT, ONNX Runtime, quantization, dynamic batching, latency/throughput optimization}
-    \item\small{\textbf{ML \& Modeling}: PyTorch, TensorFlow, BERT, multi-label classification, threshold tuning, class imbalance handling, model evaluation, A/B testing}
-    \item\small{\textbf{Data \& Evaluation}: annotation workflows, synthetic data validation, automated quality checks, error analysis, experiment design, production monitoring}
-    \item\small{\textbf{Infrastructure \& MLOps}: Temporal, Celery, Docker, Kubernetes, Helm, CI/CD, distributed workflows, multi-cloud architecture}
+\begin{itemize}[itemsep=2pt, parsep=0pt, leftmargin=0.15in]
+  \item\small{\textbf{Programming \& Kernel Development}: Python, C++, CUDA C++, Triton, PyTorch; custom GPU kernels, parallel execution, tensor indexing, reductions, memory coalescing, data-layout optimization}
+  \item\small{\textbf{ML Systems \& Inference}: vLLM, SGLang, TensorRT, ONNX Runtime, CUDA Graphs, FP8/FP16 quantization, dynamic batching, KV-cache sizing, scheduling, latency/throughput optimization}
+  \item\small{\textbf{Transformer \& ML Architecture}: causal self-attention, multi-head attention, LayerNorm, GELU, feed-forward networks, residual connections, LoRA, BERT, GPT-style decoder models}
+  \item\small{\textbf{Performance \& Infrastructure}: profiling, benchmarking, bottleneck analysis, GPU utilization, memory-footprint analysis, Docker, Kubernetes, Helm, CI/CD, distributed workflows, AWS/Azure/GCP}
 \end{itemize}
 \vspace{-8pt}
 
@@ -122,78 +121,81 @@
 \resumeSubHeadingListStart
 
 \resumeSubheading
-  {Senior Machine Learning Engineer}{March 2025 -- Present}
-  {Avalara}{Bengaluru, IN (Remote)}
-  \resumeItemListStart
-    \resumeItem{Designed production-grade \textbf{GLM-5.1 FP8 inference serving} on \textbf{2× AWS p5e.48xlarge}, covering KV-cache sizing, batching, routing, observability, failure isolation, and operational runbooks.}
-    \resumeItem{Built and deployed a secure multi-cloud LLM platform exposing standardized \textbf{OpenAI-compatible APIs} across \textbf{Azure, AWS Bedrock, and Google Vertex AI}, handling \textbf{1M+ daily requests} for internal agent and GenAI teams.}
-    \resumeItem{Designed model-routing, governance, and provider-abstraction layers to support production GenAI applications while reducing duplicate integration effort across teams.}
-    \resumeItem{Built a \textbf{BERT-based HS-code multi-label classification} system with label design, validation workflows, threshold tuning, class-imbalance handling, and production evaluation.}
-    \resumeItem{Implemented GPU inference improvements using \textbf{TensorRT, ONNX, dynamic batching, and efficient scheduling} to improve latency, throughput, and GPU utilization for classification workloads.}
-  \resumeItemListEnd
+{Senior Machine Learning Engineer}{March 2025 -- Present}
+{Avalara}{Bengaluru, IN (Remote)}
+\resumeItemListStart
+  \resumeItem{Designed production-grade \textbf{GLM-5.2 FP8 inference serving} on \textbf{2$\times$ AWS p5e.48xlarge}, analyzing model/KV-cache memory footprint, batching and concurrency limits, routing, failure isolation, and latency/throughput trade-offs.}
+  \resumeItem{Built and deployed a multi-cloud LLM serving platform exposing \textbf{OpenAI-compatible APIs} across Azure, AWS Bedrock, and Google Vertex AI, handling \textbf{1M+ daily requests} for internal GenAI workloads.}
+  \resumeItem{Built a \textbf{BERT-based multi-label classification} system with label design, threshold tuning, class-imbalance handling, controlled evaluation, and production validation.}
+  \resumeItem{Profiled and optimized GPU inference paths using \textbf{TensorRT, ONNX, batching, and runtime scheduling} to improve latency, throughput, and accelerator utilization for classification workloads.}
+\resumeItemListEnd
+\vspace{4pt}
 
-\vspace{5pt}
 \resumeSubheading
-  {ML Research Engineer - II (L5)}{April 2024 -- March 2025}
-  {Amazon}{Bengaluru, IN}
-  \resumeItemListStart
-    \resumeItem{Improved Items Glance View by \textbf{20\% across 100M products} through A/B testing, LLM-assisted experimentation, and production deployment for eliminating products  defects.}
-    \resumeItem{Built a production system fine-tuning \textbf{Mistral 7B with LoRA and HuggingFace}, serving via \textbf{vLLM} for catalog enrichment, validated against a Claude-based POC.}
-    \resumeItem{Developed an LLM platform using \textbf{Claude 3.5 Haiku} to accelerate Data Associate workflows for missing-attribute generation and catalog backfilling.}
-    \resumeItem{Developed and presented an automated prompt-fine-tuning POC using \textbf{DSPy}, projected to reduce manual prompt-engineering effort and improve ML engineer productivity by \textbf{140\%}; recognized with \textbf{RISE Q4 2024}.}
-    \resumeItem{Enhanced Amazon retail search workflows using Chain-of-Thought prompting, meta-prompting, controlled experiments, and production evaluation across internal services.}
-  \resumeItemListEnd
+{ML Research Engineer - II (L5)}{April 2024 -- March 2025}
+{Amazon}{Bengaluru, IN}
+\resumeItemListStart
+  \resumeItem{Built a production pipeline fine-tuning \textbf{Mistral 7B with LoRA and Hugging Face} and serving it through \textbf{vLLM} for catalog enrichment, with model-quality evaluation against a Claude-based baseline.}
+  \resumeItem{Improved Items Glance View by \textbf{20\% across 100M products} through controlled experimentation, model-assisted defect detection, A/B testing, and production deployment.}
+  \resumeItem{Developed an LLM platform using \textbf{Claude 3.5 Haiku} for missing-attribute generation and catalog backfilling at production scale.}
+  \resumeItem{Built an automated prompt-optimization POC using \textbf{DSPy}, projected to improve ML engineer productivity by \textbf{140\%}; recognized with \textbf{RISE Q4 2024}.}
+\resumeItemListEnd
+\vspace{4pt}
 
-\vspace{5pt}
 \resumeSubheading
-  {Senior Machine Learning Engineer}{Feb 2020 -- March 2024}
-  {Rapid Acceleration Partners}{Chennai, IN}
-  \resumeItemListStart
-    \resumeItem{Led and mentored a \textbf{4-member ML team} building document AI, OCR, classification, chatbot, and workflow-automation systems for production customers.}
-    \resumeItem{Re-architected parts of the \textbf{RAPFlow} ML pipeline for more efficient GPU deployment, adding \textbf{GPU-level inference optimizations}, runtime/export improvements, and batch-processing changes.}
-    \resumeItem{Optimized PaddleOCR invoice pipeline by writing custom \textbf{CUDA kernels} for GPU-side image normalization and \textbf{HWC to CHW preprocessing, and DBNet} probability map binarization post-processing, combined with \textbf{TensorRT FP16} engine compilation }
-    \resumeItem{Built GPU-optimized document classification and document-understanding pipelines for the airplane-parts domain using \textbf{TensorRT, ONNX, and batching} to improve latency and throughput.}
-    \resumeItem{Developed a GPT-3.5 and LangChain chatbot for automotive dealerships to answer customer questions, provide product information, schedule appointments, reduce drop-off, and improve the sales funnel.}
-    \resumeItem{Led delivery of AI automation tools for US car dealerships and warehouse workflows, improving lead generation, operational throughput, and customer workflow efficiency.}
-  \resumeItemListEnd
+{Senior Machine Learning Engineer}{Feb 2020 -- March 2024}
+{Rapid Acceleration Partners}{Chennai, IN}
+\resumeItemListStart
+  \resumeItem{Wrote custom \textbf{CUDA C++ kernels} for PaddleOCR preprocessing and post-processing, including GPU-side normalization, \textbf{HWC$\rightarrow$CHW data-layout transformation}, and DBNet probability-map binarization; integrated the optimized path with \textbf{TensorRT FP16}.}
+  \resumeItem{Re-architected ML inference pipelines for GPU execution, optimizing runtime/export paths, batching, data movement, and model execution for production document-AI workloads.}
+  \resumeItem{Built GPU-optimized document classification and understanding pipelines using \textbf{TensorRT, ONNX, and batching}, focusing on latency, throughput, and efficient accelerator execution.}
+  \resumeItem{Led and mentored a \textbf{4-member ML team} delivering document AI, OCR, classification, and automation systems for production customers.}
+\resumeItemListEnd
+\vspace{4pt}
 
-\vspace{5pt}
 \resumeSubheading
-  {Data Science Associate}{Dec 2018 -- Nov 2019}
-  {ZoomRx}{Chennai, IN}
-  \resumeItemListStart
-    \resumeItem{Built data-processing tools to integrate data from multiple sources into downstream analytics and operational modules, improving reliability of recurring data workflows.}
-  \resumeItemListEnd
+{Data Science Associate}{Dec 2018 -- Nov 2019}
+{ZoomRx}{Chennai, IN}
+\resumeItemListStart
+  \resumeItem{Built Python data-processing and analytics tooling integrating multiple upstream data sources into reliable downstream workflows.}
+\resumeItemListEnd
 
 \resumeSubHeadingListEnd
 \vspace{-5pt}
 
+%-----------SELECTED SYSTEMS PROJECTS-----------
+\section{Selected Systems Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\textbf{\href{https://github.com/rohanwinsor/LLMs-from-scratch}{LLM From Scratch}} $|$ \emph{PyTorch, Transformer Internals, LoRA}}{}
+\resumeItemListStart
+  \resumeItem{Implemented a GPT-style decoder model from first principles in PyTorch, including \textbf{causal multi-head attention, Q/K/V projections, masking, LayerNorm, GELU feed-forward blocks, residual connections, embeddings, and autoregressive generation}; trained and evaluated the model and implemented LoRA components.}
+\resumeItemListEnd
+\vspace{2pt}
+
+\resumeProjectHeading
+{\textbf{GPU Kernel Engineering} $|$ \emph{Triton, CUDA, PyTorch}}{}
+\resumeItemListStart
+  \resumeItem{Implemented and validated custom \textbf{Triton kernels} for vector operations, reductions/row-wise operations, transpose and tiled tensor workloads; analyzed strides, masking, launch configuration, memory access patterns, and coalescing against PyTorch reference implementations.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-6pt}
+
 %-----------EDUCATION-----------
 \section{Education}
 \resumeSubHeadingListStart
-  \resumeSubheading
-    {SRM University}{July 2015 -- July 2019}
-    {B.Tech, Electronics and Communication Engineering}{Chennai, TN}
+\resumeSubheading
+{SRM University}{July 2015 -- July 2019}
+{B.Tech, Electronics and Communication Engineering}{Chennai, TN}
 \resumeSubHeadingListEnd
+\vspace{-7pt}
 
 %-----------OPEN SOURCE-----------
-\section{OSS Contributions}
-\begin{itemize}[leftmargin=*]
-  \item \small{Active contributor to open-source ML and systems libraries, with merged pull requests across core Python runtime, LLM infrastructure tooling, and optimization frameworks. Full contribution history available on GitHub.}
+\section{Open Source}
+\begin{itemize}[leftmargin=0.15in]
+  \item \small{Contributor to open-source ML and systems libraries, with merged pull requests across Python runtime, LLM infrastructure tooling, and optimization frameworks. Contribution history available on GitHub.}
 \end{itemize}
-\vspace{-10pt}
-
-%-----------CERTIFICATIONS-----------
-\section{Certifications}
-\resumeSubHeadingListStart
-  \resumeSubheading
-    {\href{https://www.coursera.org/account/accomplishments/verify/R0235G152HZP}{Deep Learning Specialization}}
-    {Nov 2019}
-    {Coursera}{}
-  \resumeSubheading
-    {\href{https://www.coursera.org/account/accomplishments/verify/JJ99NMJXVSCP}{Game Theory}}
-    {Sept 2020}
-    {Stanford University}{}
-\resumeSubHeadingListEnd
 
 \end{document}
